@@ -1,8 +1,10 @@
-﻿Console.Clear ();
-Console.WriteLine ("Введите первое число (А):");
-int number1 = int.Parse(Console.ReadLine ());
+﻿//два числа на ввод, на вывод программа покажет какое из них больше
+
+Console.Clear ();
+Console.Write ("Введите первое число (А):");
+int number1 = Convert.ToInt32(Console.ReadLine ());
 Console.WriteLine ("Введите второе число (B):");
-int number2 = int.Parse(Console.ReadLine ());
+int number2 = int.Parse(Console.ReadLine ()); 
 
 if (number1 > number2)
 {
@@ -17,3 +19,6 @@ if (number1 > number2)
     {
         Console.WriteLine ("А равно В");
     }
+
+
+
