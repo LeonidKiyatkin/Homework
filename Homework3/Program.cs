@@ -3,71 +3,63 @@
 //int SetNumber(string numberName)
 
 
-Console.WriteLine($"Enter number : ");
-     int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"Enter number : ");
+//      int num = Convert.ToInt32(Console.ReadLine());
   
+// int numPalindrome = SetNumber("Palindrome");
 
-//int numPalindrome = SetNumber("Palindrome");
+// bool isPalindrome = IsPalindromeInt(numPalindrome);
 
-//bool isPalindrome = IsPalindromeInt(numPalindrome);
+// // bool isPalindrome = IsPalindromeString(numPalindrome.ToString());
 
-// bool isPalindrome = IsPalindromeString(numPalindrome.ToString());
-//bool IsPalindromeInt(int num)
+// string str = isPalindrome ? "является палиндромом" : "не является палиндромом";
+
+// if (isPalindrome)
+// {
+//     str = "является палиндромом";
+// }
+// else
+// {
+//     str = "не является палиндромом";
+// }
+// System.Console.WriteLine($"число {numPalindrome} {str}");
+
+// Задача 21
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+// int x1 = SetNumber("x1");
+// int y1 = SetNumber("y1");
+// int z1 = SetNumber("z1");
+// int x2 = SetNumber("x2");
+// int y2 = SetNumber("y2");
+// int z2 = SetNumber("z2");
+
+// double result = DistanceBetween3DPoints(x1, x2, y1, y2, z1, z2);
+
+// System.Console.WriteLine($"result {result}");
+
+
+// Задача 23  Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+//3-> 1, 8, 27
+// 5-> 1, 8, 27, 64, 125
+int num = SetNumber("N");
+
+int[] arr = CubeTable(num);
+
+System.Console.WriteLine(String.Join(",", arr));
+
+int[] CubeTable(int n)
 {
-    // num = 456654
-    int temp = num;
-    // temp = 456654
-    int revert = 0;
+    int[] arr = new int[n];
 
-    while (temp > 0)
+    for (int i = 1; i <= n; i++)
     {
-        //revert= 0*10=0 + 4=4
-        //revert= 4*10=40 + 5=45
-        //revert= 45*10=450 + 6=456
-        //revert= 456*10=4560 + 6=4566
-        //revert= 4566*10=45660 +5=45665
-        //revert= 45665*10=456650 + 6=456654
-        revert = (revert * 10) + (temp % 10);
-
-        //temp = 45665
-        //temp = 456
-        //temp = 45
-        //temp = 4
-        temp /= 10;
-
+        arr[i - 1] = i * i * i;
     }
 
-    return revert == num;
+    return arr;
 }
-
-bool IsPalindromeString(string str)
-{
-    int size = str.Length;
-    for (int i = 0; i <= size / 2; ++i)
-    {
-        if (str[i] != str[size - 1 - i])
-        {
-            return false;
-        }
-    }
-    return true;
-}
-
-string str = isPalindrome ? "является палиндромом" : "не является палиндромом";
-
-if (isPalindrome)
-{
-    str = "является палиндромом";
-}
-else
-{
-    str = "не является палиндромом";
-}
-System.Console.WriteLine($"число {numPalindrome} {str}");
-
-
-
-
 
 
 
