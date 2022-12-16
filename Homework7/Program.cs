@@ -34,7 +34,13 @@
 
 // FillArray(array);
 // PrintArray(array);
-// Задача 50. Напишите программу, которая на вход принимает значение элемента и выдает его индекс колонки и строки
+// // Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
+// и возвращает значение этого элемента или же указание, что такого элемента нет.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// 17->такого числа в массиве нет
 
 void FillArray(int[,] matrix)
 {
@@ -42,20 +48,20 @@ void FillArray(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = new Random().Next(0, 10);
+            matrix[i, j] = new Random().Next(0, 15);
         }
     }
 }
 
 void NoNumber(int[,] matrix)
 {
-    Console.Write("в какой строке элемент? - ");
+    Console.Write("Строка - ");
     int Rows = Convert.ToInt32(Console.ReadLine());
-    Console.Write("В каком столбце? - ");
+    Console.Write("Столбец - ");
     int Colums = Convert.ToInt32(Console.ReadLine());
     if (Rows <= matrix.GetLength(0) && Colums <= matrix.GetLength(1))
     {
-        Console.WriteLine($"Индекс элемента {Rows} строки и {Colums} столбца равен {matrix[Rows -1, Colums-1]}");
+        Console.WriteLine($"Значение элемента {Rows} строки и {Colums} столбца равно {matrix[Rows -1, Colums - 1]}");
     }
     else
     {
@@ -75,7 +81,7 @@ void PrintArray(int[,] matrix)
     }
 }
 
-int[,] array = new int[4, 4];
+int[,] array = new int[5, 5];
 FillArray(array);
 PrintArray(array);
 NoNumber(array);
