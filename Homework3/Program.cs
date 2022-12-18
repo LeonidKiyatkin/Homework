@@ -43,24 +43,43 @@
 // Задача 23  Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 //3-> 1, 8, 27
 // 5-> 1, 8, 27, 64, 125
-int num = SetNumber("N");
+// int num = SetNumber("N");
 
-int[] arr = CubeTable(num);
+// int[] arr = CubeTable(num);
 
-System.Console.WriteLine(String.Join(",", arr));
+// System.Console.WriteLine(String.Join(",", arr));
 
-int[] CubeTable(int n)
-{
-    int[] arr = new int[n];
+// int[] CubeTable(int n)
+// {
+//     int[] arr = new int[n];
 
-    for (int i = 1; i <= n; i++)
-    {
-        arr[i - 1] = i * i * i;
-    }
+//     for (int i = 1; i <= n; i++)
+//     {
+//         arr[i - 1] = i * i * i;
+//     }
 
-    return arr;
-}
+//     return arr;
 
+int a = new Random().Next(1, 30);
+Console.Write ("a = ");
+Console.WriteLine (a);
+
+int b = new Random().Next(1, 30);
+Console.Write ("b = ");
+Console.WriteLine (b);
+
+int max = a;
+int min = b;
+
+if (b > max) max = b;
+if (a < max) min = a;
+
+Console.Write ("max = ");
+Console.WriteLine (max);
+
+
+Console.Write ("min = ");
+Console.WriteLine (min);
 
 
 

@@ -60,35 +60,35 @@
 
 //Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
-// Console.WriteLine("Введите день недели числом (1-7), и я скажу выходной ли это: ");
-// int day = Convert.ToInt32(Console.ReadLine());
-// switch (day)
-// {
-//    case 1:
-//    Console.WriteLine("Понедельник - нет");
-//    break;
-//    case 2:
-//    Console.WriteLine("Вторник - нет");
-//    break;
-//    case 3:
-//    Console.WriteLine("Среда - нет");
-//    break;
-//    case 4:
-//    Console.WriteLine("Четверг - нет");
-//    break;
-//    case 5:
-//    Console.WriteLine("Пятница - нет");
-//    break;
-//    case 6:
-//    Console.WriteLine("Суббота - да");
-//    break;
-//    case 7:
-//    Console.WriteLine("Воскресенье - да");
-//    break;
-//    default:
-//    Console.WriteLine("такого дня недели нет");
-//    break;
-// }
+Console.WriteLine("Введите день недели числом (1-7), и я скажу выходной ли это: ");
+int day = Convert.ToInt32(Console.ReadLine());
+switch (day)
+{
+   case 1:
+   Console.WriteLine("Понедельник - нет");
+   break;
+   case 2:
+   Console.WriteLine("Вторник - нет");
+   break;
+   case 3:
+   Console.WriteLine("Среда - нет");
+   break;
+   case 4:
+   Console.WriteLine("Четверг - нет");
+   break;
+   case 5:
+   Console.WriteLine("Пятница - нет");
+   break;
+   case 6:
+   Console.WriteLine("Суббота - да");
+   break;
+   case 7:
+   Console.WriteLine("Воскресенье - да");
+   break;
+   default:
+   Console.WriteLine("такого дня недели нет");
+   break;
+}
 
 // Console.WriteLine ("Введите номер четверти");
 // int num = Convert.ToInt32 (Console.ReadLine());
@@ -245,31 +245,77 @@
 // Console.WriteLine(newText);
 
 
-int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1};
+// int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1};
 
-void PrintArray(int[] array)
-{
-   int count = array.Length;
-for (int i = 0; i < count; i++)
-{
-   Console.Write($"{array[i]} ");
-}
-Console.WriteLine();
-}
-void SelectionSort(int[] array)
-{
-   for (int i = 0; i < array.Length - 1; i++)
-   {
-      int minPosition = i;
-      for (int j = i+1; j < array.Length; j++)
-      {
-        if(array[j] < array[minPosition]) minPosition = j;
-      }
-      int temporary = array[i];
-      array[i] = array[minPosition];
-      array[minPosition] = temporary;
-   }
-}
-PrintArray(arr);
-SelectionSort(arr);
-PrintArray(arr);
+// void PrintArray(int[] array)
+// {
+//    int count = array.Length;
+// for (int i = 0; i < count; i++)
+// {
+//    Console.Write($"{array[i]} ");
+// }
+// Console.WriteLine();
+// }
+// void SelectionSort(int[] array)
+// {
+//    for (int i = 0; i < array.Length - 1; i++)
+//    {
+//       int minPosition = i;
+//       for (int j = i+1; j < array.Length; j++)
+//       {
+//         if(array[j] < array[minPosition]) minPosition = j;
+//       }
+//       int temporary = array[i];
+//       array[i] = array[minPosition];
+//       array[minPosition] = temporary;
+//    }
+// }
+// PrintArray(arr);
+// SelectionSort(arr);
+// PrintArray(arr);
+
+// int a = new Random().Next(1, 30);
+// Console.Write ("a = ");
+// Console.WriteLine (a);
+
+// int b = new Random().Next(1, 30);
+// Console.Write ("b = ");
+// Console.WriteLine (b);
+
+// int max = a;
+// int min = b;
+
+// if (b > max) max = b;
+// if (a < max) min = a;
+
+// Console.Write ("max = ");
+// Console.WriteLine (max);
+
+
+// Console.Write ("min = ");
+// Console.WriteLine (min);
+
+// int N = new Random().Next(1,3);
+// Console.Write ("Вводное число:  ");
+// Console.WriteLine (N);
+// if (N % 2 == 0) 
+// {
+//         while (N > 1)
+//         {
+//             Console.Write ("Четные числа от 1 до N:   ");
+//             Console.WriteLine (N);
+//             N = N - 2;
+//         }
+        
+// }
+// else
+// {
+//         while (N > 1)
+//         {
+//             Console.Write ("Четные числа от 1 до N:   ");
+//             Console.WriteLine (N - 1);
+//             N = N - 2;
+//         }
+        
+// }
+
